@@ -1,0 +1,4 @@
+C:\Users\ata1273\documents\visual studio 2015\Projects\Pages\Pages\Pages\obj\Debug\Pages.dll.mdb
+C:\Users\ata1273\documents\visual studio 2015\Projects\Pages\Pages\Pages\bin\Debug\Pages.dll.mdb
+C:\Users\ata1273\documents\visual studio 2015\Projects\Pages\Pages\Pages\obj\Debug\Pages.dll.mdb
+C:\Users\ata1273\documents\visual studio 2015\Projects\Pages\Pages\Pages\bin\Debug\Pages.dll.mdb

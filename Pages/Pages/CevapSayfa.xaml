@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.CevapSayfa">
+
+  <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <ScrollView.Content>
+  <StackLayout x:Name="sl"  Padding="20,10,20,20" >
+
+
+
+    <Label x:Name="lab11" TextColor="Black" IsVisible="false" BackgroundColor="White"></Label>
+
+    <Image x:Name="but" VerticalOptions="Center" HorizontalOptions="Center"  >
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer
+          Tapped="onc"
+            />
+      </Image.GestureRecognizers>
+    </Image>
+
+    <Label x:Name="cevapyazisi" Text="CEVAP:" FontAttributes="Bold" FontSize="30" IsVisible="False"></Label>
+    <Label x:Name="lab22" TextColor="Black" IsVisible="false" BackgroundColor="White"></Label>
+
+    <Image x:Name="but2" VerticalOptions="Center" HorizontalOptions="Center"  >
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer
+          Tapped="oncevap"
+            />
+      </Image.GestureRecognizers>
+    </Image>
+
+
+
+    <Grid x:Name="grid" IsVisible="False">
+     <Button x:Name ="okbut1" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"  IsVisible="False" Text="Geri" Clicked="onc1"></Button>
+     <Button x:Name ="okbut"   VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" IsVisible="False" Text="Cevapla"  Clicked="onc2"></Button>
+   </Grid>
+
+    
+    <ListView x:Name="lstStudents" ItemSelected="onSelected" HasUnevenRows="True" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell Height="50">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+
+              <Image Source="{Binding icon}" Grid.Column="0" HorizontalOptions="Start" x:Name="cevapgoster" ></Image>
+              <Label Text="{Binding text}" Grid.Column="1" FontAttributes="Bold"></Label>
+              <Image Source="{Binding textorurl}"  Grid.Column="1"> </Image>
+            <Label x:Name="soranadi" Text="{Binding ekleyen}"  Grid.Column="2" HorizontalOptions="End"></Label>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <Label x:Name="lab" ></Label>
+
+  </StackLayout>
+    </ScrollView.Content>
+  </ScrollView>
+</ContentPage>

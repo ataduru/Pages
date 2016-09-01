@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.SıralamaPage">
+  <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <ScrollView.Content>
+      <StackLayout  x:Name="sl"  Padding="20,10,20,20" >
+        <Label Text="Puan Sıralaması" Font="30" FontAttributes="Bold" FontFamily="Verdana"> </Label>
+        <ListView x:Name="lstStudents" HasUnevenRows="True" >
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell Height="50">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Label Text="{Binding Name}" Grid.Column="0" Grid.ColumnSpan="2"  ></Label>
+                  <Label Text="{Binding okul}" Grid.Column="1" HorizontalOptions="End"></Label>
+                  <Label Text="{Binding puan}" Grid.Column="2" HorizontalOptions="End"> </Label>
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ScrollView.Content>
+  </ScrollView>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.Sorularım">
+ <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <ScrollView.Content>
+  <StackLayout x:Name="sl"  Padding="20,10,20,20" >
+
+
+
+    <Label x:Name="lab11" TextColor="Black" IsVisible="false" BackgroundColor="White"></Label>
+
+    <Image x:Name="but" VerticalOptions="Center" HorizontalOptions="Center"  >
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer
+          Tapped="onc"
+            />
+      </Image.GestureRecognizers>
+    </Image>
+
+    <Label x:Name="cevapyazisi" Text="CEVAP:" FontAttributes="Bold" FontSize="30" IsVisible="False"></Label>
+    <Label x:Name="lab22" TextColor="Black" IsVisible="false" BackgroundColor="White"></Label>
+
+    <Image x:Name="but2" VerticalOptions="Center" HorizontalOptions="Center"  >
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer
+          Tapped="oncevap"
+            />
+      </Image.GestureRecognizers>
+    </Image>
+
+
+
+    <Grid x:Name="grid" IsVisible="False">
+     <Button x:Name ="okbut1" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"  IsVisible="False" Text="Geri" Clicked="onc1"></Button>
+     <Button x:Name ="okbut"   VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" IsVisible="False" Text="Cevapla"  Clicked="onc2"></Button>
+   </Grid>
+    <Picker x:Name="rate" IsVisible="False" Title="Bu cevaba bir puan ver!"></Picker>
+    <Label x:Name="cevaplanmadi" Text="Malesef sorunuz henüz cevaplanmadı..." IsVisible="False"></Label>
+
+
+
+    <ListView x:Name="lstStudents" ItemSelected="onSelected" HasUnevenRows="True" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell Height="50">
+            <StackLayout Orientation="Horizontal">
+              
+              <Image Source="{Binding icon}" x:Name="cevapgoster" ></Image>
+              <Label Text="{Binding text}" FontAttributes="Bold"></Label>
+              <Image Source="{Binding textorurl}" > </Image>
+              
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <Label x:Name="lab" ></Label>
+
+  </StackLayout>
+    </ScrollView.Content>
+  </ScrollView></ContentPage>

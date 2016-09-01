@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.AddQuestion">
+  <StackLayout Padding="20,50,20,20" Spacing="2">
+
+    <Entry x:Name="entri" BackgroundColor="White" HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100" PlaceholderColor="Gray" TextColor="Black"  Placeholder="Sorunu text halinde buraya girebilirsin..."></Entry>
+
+    <Grid>
+
+
+
+
+      <Image Source="camera.png" Grid.Column="1" Grid.Row="0">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer
+                  Tapped="add"
+                 />s
+        </Image.GestureRecognizers>
+      </Image>
+
+      <Image Source="gallery.png" Grid.Column="8" Grid.Row="0">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer
+                  Tapped="addgallery"
+                 />
+        </Image.GestureRecognizers>
+      </Image>
+      
+        
+      <Image  Grid.Column="9" Grid.Row="0"> </Image>
+
+
+    </Grid>
+    <Image x:Name="MainImage"></Image>
+
+    <Label x:Name="PathLabel" TextColor="Black"></Label>
+
+    <Button Text="YÜKLE" Clicked="asd"></Button>
+    
+  </StackLayout>
+  
+</ContentPage>

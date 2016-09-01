@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.Page2" >
+  <ContentPage.Content >
+    <StackLayout Padding="10,10,10,50">
+    <TableView Intent="Menu" >
+      <TableRoot >
+        <TableSection Title="KAYIT OL"  >
+          <EntryCell x:Name="kadi"  Label="Kullanıcı Adınız" Placeholder="Kullanıcı Adı..." ></EntryCell>
+          <EntryCell x:Name="pass" Label="Şifreniz" Placeholder="Şifre..."></EntryCell>
+          <EntryCell Label="Şifrenizi Tekrar Girin" Placeholder="Şifre..."></EntryCell>
+          <EntryCell x:Name="em" Label="E-Mail Adresiniz" Placeholder="E-Mail Adresiniz" Keyboard="Email"></EntryCell>
+         
+        </TableSection>
+      </TableRoot>
+    </TableView>
+      <Picker  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"  Title="Listede Yer Alıyorsa Okulunuzu Seçin" x:Name="pick" >  </Picker>
+    <Button x:Name="b"   VerticalOptions="Center" HorizontalOptions="Center" Text="KAYIT OL" TextColor="White" Clicked="OnClick"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+
+  
+</ContentPage>

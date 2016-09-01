@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.ProfilePage">
+  <StackLayout>
+  <Label Text="Profilim" FontSize="40" TextColor="White" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+    <Label x:Name="isim"  TextColor="White"> </Label>
+  </StackLayout>
+
+</ContentPage>

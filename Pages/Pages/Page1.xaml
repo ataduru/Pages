@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.Page1">
+  <ContentPage.Content>
+  <StackLayout x:Name="layout" Padding="30,100,30,30" Spacing="10"  >
+    <Entry x:Name="kullaniciadi" BackgroundColor="White" VerticalOptions="Center"  PlaceholderColor="Gray" TextColor="Black"  Placeholder="Kullanici Adi..."></Entry>
+    <Entry x:Name="sifre" IsPassword="true" BackgroundColor="White" PlaceholderColor="Gray" TextColor="Black"  VerticalOptions="Center"  Placeholder="Parola..."></Entry>
+    <Button x:Name="b" VerticalOptions="Center" HorizontalOptions="Center" Text="GİRİŞ"  TextColor="White" Clicked="OnClick"></Button>
+    <Button x:Name="b1" VerticalOptions="Center" HorizontalOptions="Center" Text="KAYIT OL" TextColor="White" Clicked="OnClick1"></Button>
+    <Label x:Name="l" VerticalOptions="Center" HorizontalOptions="Center" Text="Kullanıcı adı ya da parola yanlış. Lütfen tekrar deneyin." TextColor="White" IsVisible="False"></Label>
+  </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.Page0" x:Name="Cont">
+  <StackLayout x:Name="stek" Spacing="20" Padding="20,100,20,20">
+  
+    <Image Source="icon.png"  HorizontalOptions="Center" VerticalOptions="Center"> </Image>
+    <Label x:Name="bisoru" Text="Bi' Soru" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="50" FontAttributes="Bold" TextColor="Black"></Label>
+  </StackLayout>
+</ContentPage>

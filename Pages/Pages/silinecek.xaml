@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.silinecek">
+  <ContentPage.Content>
+
+    
+      <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <ScrollView.Content>
+          <StackLayout Padding="20,20,20,30">
+            <Entry x:Name="entri" BackgroundColor="White" HeightRequest="80" WidthRequest="80" MinimumHeightRequest="80" MinimumWidthRequest="80" PlaceholderColor="Gray" TextColor="Black"  Placeholder="Sorunu text halinde buraya girebilirsin..."></Entry>
+
+            <Grid>
+              <Image x:Name="imgFotoEkle" Grid.Row="0" Grid.Column="0" Source="camera.png">
+                <Image.GestureRecognizers>
+                  <TapGestureRecognizer
+                    Tapped="imgFotoEkle_Clicked"
+            />
+                </Image.GestureRecognizers>
+              </Image>
+
+              <Image x:Name="imgFotoEkle2" Grid.Row="0" Grid.Column="8" Source="gallery.png">
+                <Image.GestureRecognizers>
+                  <TapGestureRecognizer
+                    Tapped="imgFotoEkle_Clicked2"
+                 />
+                </Image.GestureRecognizers>
+              </Image>
+              
+            </Grid>
+            <Image x:Name="MainImage" Source="result.png"  >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                  Tapped="imgFotoEkle_Clicked2"
+            />
+              </Image.GestureRecognizers>
+            </Image>
+
+            <Label x:Name="lblpath" Text="Değiştirmek için Fotoğrafa Tıkla" IsVisible="False" TextColor="Black" FontSize="16"  HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+
+            <Button x:Name="yuklebuton" Text="YÜKLE" Clicked="yukle"  HorizontalOptions="Center" VerticalOptions="Center"></Button>
+            </StackLayout>
+        </ScrollView.Content>
+      </ScrollView>
+    
+
+
+  </ContentPage.Content>
+</ContentPage>
